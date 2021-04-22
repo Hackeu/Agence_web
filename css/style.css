@@ -1,0 +1,766 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus{
+    outline: none;
+}
+
+/* En-tete */
+
+header{
+    height: 100vh;
+    background-image: url("../images/APPS.fr.gif");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+header::before{
+    content: "";
+    position: absolute;
+    background: rgba(24, 18, 18, 0.705);
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+header section{
+    z-index: 1;
+}
+header section.top{
+    border-bottom: 1px solid rgba(161, 146, 146, 0.568);
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+header section.top,
+header section.top div{
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+header section.top p{
+    font-size: 14px;
+    margin: 10px;
+    text-transform: uppercase;
+    font-family: serif;
+    display: flex;
+}
+header section.top p i{
+    margin: 0px 4px;
+}
+header section.menu{
+    grid-area: menu;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0px 10%;
+}
+header section.menu .logo img{
+    width: 180px;
+    height: 80px;
+    object-fit: cover;
+}
+header section.menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+header section.menu ul li a{
+    color: white;
+    padding: 10px 7px;
+    font-size: 20px;
+    margin: 0px 10px;
+    transition: all .5s linear;
+}
+header section.menu ul li a:hover{
+    background: white;
+    color: black;
+}
+header section.banner,
+header section.banner div{
+    grid-area: banner;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 10%;
+}
+header section.banner div h1{
+    /* white-space: nowrap; */
+    font-size: 5em;
+    /* overflow: hidden; */
+    opacity: 1;
+    transition: all 1s linear;
+}
+header section.banner p{
+    font-size: 2em;
+}
+header label i{
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    font-size: 30px;
+    color: white;
+    visibility: hidden;
+}
+header input{
+    display: none;
+}
+/*-------X------- En-tete -------X------- */
+
+/* Contenu principal */
+/* A propos */
+main #apropos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+main #apropos h2{
+    font-size: 3em;
+    color: cornflowerblue;
+    font-family: 'Open sans';
+    padding: 4px;
+}
+main #apropos .description{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main #apropos .description > div img{
+    object-fit: cover;
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+}
+/*-------X-------- A propos --------X------- */
+
+/* Services */
+main #service{
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #124;
+    overflow: hidden;
+}
+main #service > i{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+}
+main #service h2{
+    font-size: 2em;
+    color: aliceblue;
+    font-family: 'Open sans';
+    margin-bottom: 10px;
+}
+main #service .services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+main #service .services .bloc{
+    opacity: 1;
+    margin: 10px;
+    padding: 10px;
+    background: rgba(240, 248, 255, 0.548);
+    transition: all .5s linear;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main #service .services .bloc:hover{
+    background: aliceblue;
+    filter: blur(0px);
+    filter: drop-shadow(1px 1px 60px rgba(0, 0, 0, 0.726));
+    transform: scale(1.1);
+    z-index: 200;
+}
+main #service .services .bloc h3{
+    font-size: 25px;
+    margin: 10px 0px;
+}
+main #service .services .description ul li i{
+    font-size: 14px;
+    margin: 4px;
+    color: #124;
+}
+main #service .services button{
+    padding: 10px;
+    margin-top: 20px;
+    background: #124;
+    border: 1px solid #124;
+    color: white;
+    transition: all .5s linear;
+}
+main #service .services button:hover{
+    color: #124;
+    background: transparent;
+}
+/*-------X------- Services --------X------ */
+
+/* Avantages */
+main #avantage{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px 0px;
+}
+main #avantage h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: cornflowerblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main #avantage .avantages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 0px 40px;
+}
+main #avantage .avantages div{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 10px;
+}
+main #avantage .avantages div img{
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+}
+/*-------X------- Avantages --------X------ */
+/* Rendez-vous */
+main #rv{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background-image: url("../images/rv.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+main #rv::before{
+    content: "";
+    position: absolute;
+    background: rgba(9, 36, 95, 0.507);
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+main #rv div{
+    margin: 0px 50px;
+    padding: 20px;
+    text-align: justify;
+    width: 50%;
+    z-index: 10;
+}
+main #rv div h2{
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+main #rv div h3{
+    font-size: 20px;
+    color: aliceblue;
+    opacity: .7;
+}
+main #rv div form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0px 10px;
+    background: rgba(12, 61, 104, 0.329);
+}
+main #rv div form input,
+main #rv div form button{
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid transparent;
+}
+main #rv div form button{
+    color: white;
+    background: #124;
+    border: 1px solid #124;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+/*-------X-------Rendez-vous --------X------ */
+/* SEO */
+main #seo{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0px 40px;
+    padding: 10px;
+}
+main #seo div{
+    text-align: justify;
+    width: 50%;
+    margin: 20px;
+}
+main #seo div h2{
+    font-size: 2.5em;
+    color: #124;
+    margin: 0px 15px;
+    font-family: 'Open sans';
+    text-align: left;
+}
+main #seo div h4{
+    font-family: Poppins;
+    margin: 10px 15px;
+    font-size: 20px;
+    opacity: .7;
+    color: rgba(78, 132, 241, 0.836);
+}
+main #seo div p{
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main #seo div img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-------X------ SEO -------X------ */
+
+/* Contact */
+main #contact{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #124;
+    overflow: hidden;
+}
+main #contact div{
+    margin: 0px 50px;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    z-index: 10;
+}
+main #contact div h2{
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+main #contact div h3{
+    font-size: 20px;
+    color: aliceblue;
+    opacity: .7;
+}
+main #rv div form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0px 0px;
+    background: rgba(12, 61, 104, 0.329);
+}
+main #contact form{
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(9, 10, 12, 0.253);
+    padding: 20px 0px;
+}
+main #contact form .collapse{
+    display: flex;
+}
+main #contact form .collapse input{
+    padding: 10px;
+    font-size: 16px;
+    margin: 0px 10px;
+    border: 1px solid white;
+}
+main #contact form .collapse.mail{
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+    width: 81%;
+}
+main #contact form .collapse.msg{
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    width: 80%;
+}
+main #contact form .collapse.msg label{
+    margin-bottom: 10px;
+    color: white;
+}
+main #contact form .collapse.msg textarea{
+    padding: 10px;
+    font-size: 16px;
+    font-family: serif;
+    border: 1px solid white;
+    width: 97%;
+}
+main #contact form .collapse button{
+    color: #124;
+    background: rgba(220, 223, 230, 0.801);
+    border: 1px solid rgba(220, 223, 230, 0.801) ;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    filter: drop-shadow(1px 1px 1px white);
+}
+/*-------X------ Contact-------X------ */
+/* Realisations */
+main #realisations{
+    /* min-height: 100vh; */
+    padding: 20px 0px;
+}
+main #realisations,
+main #realisations #carousel{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: rgba(17, 34, 68, 0.637);
+    width: 100%;
+}
+main #realisations #carousel{
+    flex-direction: column;
+    background: transparent;
+}
+main #realisations h2{
+    font-size: 2.5em;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin-left: 10%;
+    filter: drop-shadow(1px 1px 10px black);
+    width: 50%;
+    text-align: center;
+}
+.navigation button{
+    padding: 10px;
+    margin: 20px;
+    background: #124;
+    border: 1px solid #124;
+    width: 50px;
+    font-size: 20px;
+    color: white;
+}
+.navigation button:focus{
+    outline: none;
+    background: transparent;
+}
+.carousel_images img{
+    width: 500px;
+    height: 350px;
+}
+.carousel{
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+}
+.carousel_images{
+    display: flex;
+    transform: translateX(0px);
+    transition: transform 1s;
+}
+/*--------X-------- Realisations --------X-------- */
+main .scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2em;
+    color: white;
+    width: 50px;
+    height: 100px;
+    background: black;
+    position: fixed;
+    z-index: 100;
+    top: 40vh;
+    left: 0%;
+    visibility: hidden;
+}
+/* pieds de page */
+footer{
+    background: #124;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+footer section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    opacity: .6;
+}
+footer h2{
+    margin-bottom: 30px;
+}
+footer section div{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    text-align: left;
+}
+footer .icones{
+    display: block;
+    position: relative;
+    top: -10px;
+}
+footer .icones i{
+    font-size: 1em;
+    margin: 10px;
+    color: teal;
+}
+footer .icones i:hover{
+    opacity: .5;
+}
+footer section div span{
+    color: rgba(240, 248, 255, 0.747);
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer #alerte{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.836);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+    filter: drop-shadow(1px 1px 5px black);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer #alerte #close{
+    position: absolute;
+    right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+footer #alerte #valid{
+    color: rgba(0, 128, 0, 0.733);
+}
+footer #alerte #invalid{
+    color: red;
+}
+/*---------X-------- pieds de page ----------X------- */
+
+@media screen and (max-width: 960px){
+    header input[type="checkbox"]:checked ~ ul{
+        display: flex;
+        right: 0%;
+        background: #124;
+        padding: 40px 10px 20px 10px;
+        position: absolute;
+        top: 0px;
+        height: 200px;
+        opacity: 1;
+    }
+    header section.menu ul{
+        flex-direction: column;
+        position: absolute;
+        right: -100%;
+        transition: all .5s linear;
+        top: 0px;
+        height: 200px;
+        opacity: 0;
+        z-index: 100;
+    }
+    header section.menu ul li a{
+        font-family: serif;
+        padding: 0% 2px;
+    }
+    header section.menu ul li a:hover{
+        background: transparent;
+        color: white;
+        opacity: .5;
+    }
+    header section.banner div h1{
+        font-size: 3em;
+        top: 20%;
+    }
+    header section.banner p{
+        font-size: 2em;
+    }
+    header label i{
+        visibility: visible;
+        z-index: 100;
+    }
+    main #apropos .description{
+        width: 90%;
+    }
+    main #rv{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    main #rv div{
+        width: 80%;
+    }
+    main #seo{
+        flex-direction: column-reverse;
+    }
+    main #seo div{
+        width: 80%;
+    }
+    main #contact{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    main #contact div{
+        width: 80%;
+    }
+    main #realisations{
+        flex-direction: column;
+    }
+    main #realisations h2{
+        font-size: 1.5em;
+        margin-left: 0%;
+    }
+    footer .icones{
+        display: block;
+        position: relative;
+        top: -10px;
+    }
+    footer .icones i{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 600px){
+    main #realisations #carousel{
+        width: 50%;
+    }
+    .carousel_images img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 450px){
+    header section.banner div h1{
+        font-size: 3em;
+    }
+    main #apropos h2{
+        font-size: 30px;
+    }
+    main #avantage h2{
+        font-size: 30px;
+    }
+    main #rv div{
+        width: 90%;
+        text-align: left;
+    }
+    main #rv div h2{
+        font-size: 2em;
+    }
+    main #seo div{
+        width: 90%;
+        margin: 0px;
+        text-align: left;
+    }
+    main #seo div h2{
+        font-size: 2em;
+    }
+    main #seo div img{
+        margin-bottom: 10px;
+    }
+    main #contact form .collapse{
+        width: 100px;
+        flex-wrap: wrap;
+    }
+    main #contact form .collapse input{
+        margin: 10px 0px;
+        width: 200px;
+    }
+    main #contact form .collapse.msg{
+        width: 230px;
+        left: 10px;
+    }
+    main #contact form .collapse button{
+        padding:2px 40px;
+    }
+    .carousel{
+        width: 250px;
+        height: 350px;
+    }
+    @media screen and (max-width: 380px){
+        .carousel_images img{
+            width: 250px;
+            height: 350px;
+        }
+        .navigation button{
+            margin: 10px 0%;
+        }
+    }
+}
